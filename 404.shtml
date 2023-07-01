@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404</title>
+</head>
+<body>
+	<h1>&#127859; 404</h1>
+	<p>The file <b><code><!--#echo var="REQUEST_URI" --></code></b> is not currently on this plane of existence. We are sorry for your loss.</p>
+	<ul>
+		<li><a href="/">return to devlog</a></li>
+	</ul>
+</body>
+</html>
