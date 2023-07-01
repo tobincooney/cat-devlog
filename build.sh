@@ -2,6 +2,7 @@
 
 # TO DO:
 # . RSS feed
+# . all tags page: sort the tags alphabetically
 
 head=$( cat src/head.htm )
 foot=$( cat src/foot.htm )
