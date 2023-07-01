@@ -48,7 +48,8 @@ for i in $( ls -r src/posts/*.htm ); do
 done
 
 # main posts page
-echo "$head<h1>Cat Frend Game Devlog ooo</h1><h4>posts:</h4><ul>$posts_toc</ul>$posts_full$foot" > site/posts.html
+posts_top=$( cat src/posts-top.htm )
+echo "$head$posts_top<h4>posts:</h4><ul>$posts_toc</ul>$posts_full$foot" > site/posts.html
 
 
 # tags
