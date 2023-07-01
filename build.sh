@@ -39,7 +39,7 @@ for i in $( ls -r src/posts/*.htm ); do
 		echo "<li><a href=\"$name.html\">$prettyname</a></li>" >> etc/tags/$n.txt
 	done
 	#main="<h1>$prettyname</h1>$( tail -n +3 $i )"
-	main="<center><small>$name</small></center><h1>$prettyname</h1>$( tail -n +3 $i )"
+	main="<p><a href='posts.html#$name'>&lt; Back</a></p><center><small>$name</small></center><h1>$prettyname</h1>$( tail -n +3 $i )"
 	# standalone page
 	page="$head$main<br><p>Tags: $tags</p>$foot"
 	posts_toc+="<li><small>$name</small> <a href='#$name'>$prettyname</a></li>"
