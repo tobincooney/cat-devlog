@@ -1,0 +1,26 @@
+:root {
+	--color0: #211;
+	--color1: #eee;
+	--color2: #fa0;
+	--color3: #0a8;
+	--color4: #f55;
+}
+body {
+	font-family: serif;
+	line-height: 1.2em;
+	background-color: var(--color0);
+	color: var(--color1);
+}
+a {
+	color:inherit;
+	text-decoration:underline;
+}
+a:hover { color:var(--color3); }
+*::selection { background-color:var(--color3); color:var(--color1); }
+h1 { line-height:1em; width:100%; text-align:center; margin-bottom:1em; }
+h2 { font-size:140%; margin-bottom:1em; padding-bottom:0; }
+hr { border:none; height:1px; background-color:var(--color1); }
+div#main { max-width:762px; margin:auto; padding:24px; }
+
+@media screen and (max-width: 600px) {
+}
