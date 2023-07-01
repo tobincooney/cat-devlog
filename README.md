@@ -1,3 +1,3 @@
 # devlog for cat frend game
 
-https://tobincooney.github.io/cat-devlog (might move)
+live at https://cat.tib.ooo/
