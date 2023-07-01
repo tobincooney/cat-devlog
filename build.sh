@@ -13,14 +13,14 @@ if ! [ -d site ]; then
 fi
 
 rm site/*.html
-cp src/main.css site/
+#cp src/main.css site/
 
 if ! [ -d etc/tags ]; then
 	mkdir -p etc/tags
 fi
 rm etc/tags/*.txt
 
-cp src/main.css site/
+#cp src/main.css site/
 
 
 

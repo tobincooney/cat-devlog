@@ -1,12 +1,16 @@
 :root {
-	--color0: #211;
-	--color1: #eee;
+	--color0: #eee;
+	--color1: #211;
 	--color2: #fa0;
 	--color3: #0a8;
 	--color4: #f55;
 }
+@font-face {
+	font-family: 'Josefin';
+	src: url('media/JosefinSans-VariableFont_wght.ttf');
+}
 body {
-	font-family: serif;
+	font-family: 'Josefin', serif;
 	line-height: 1.2em;
 	background-color: var(--color0);
 	color: var(--color1);
