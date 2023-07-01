@@ -49,7 +49,7 @@ done
 
 # main posts page
 posts_top=$( cat src/posts-top.htm )
-echo "$head$posts_top<h4>posts:</h4><ul>$posts_toc</ul>$posts_full$foot" > site/posts.html
+echo "$head$posts_top<br><h4>posts:</h4><ul>$posts_toc</ul>$posts_full$foot" > site/posts.html
 
 
 # tags
