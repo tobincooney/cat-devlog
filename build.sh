@@ -32,7 +32,10 @@ posts_toc=""
 for i in $( ls -r src/posts/*.htm ); do
 	name=$( echo "$i" | sed 's/src\/posts\///' | sed 's/\.htm//' )
 	echo "-- $name"
-	prettyname=$( tail -n +2 $i | head -1 | sed 's/<h2>//' | sed 's/<\/h2>//' )
+	prettyname=$( head -3 $i | tail -1 | sed 's/<h2>//' | sed 's/<\/h2>//' )
+	author=$( head -2 $i | tail -1 )
+	author_format=$( echo "${author,,}" | sed 's/ /_/' )
+	echo "<li><a href=\"$name.html\">$prettyname</a></li>" >> etc/tags/$author_format.txt
 	tags_raw=$( head -1 $i )
 	tags=""
 	for n in ${tags_raw[@]}; do
@@ -40,11 +43,11 @@ for i in $( ls -r src/posts/*.htm ); do
 		echo "<li><a href=\"$name.html\">$prettyname</a></li>" >> etc/tags/$n.txt
 	done
 	#main="<h1>$prettyname</h1>$( tail -n +3 $i )"
-	main="<p><a href='posts.html#$name'>&lt; Back</a></p><center><small>$name</small></center><h1>$prettyname</h1>$( tail -n +3 $i )"
+	main="<p><a href='posts.html#$name'>&lt; Back</a></p><center><small>$name</small></center><h1>$prettyname</h1><p class='author'>by <a href='$author_format.html'>$author</a></p>$( tail -n +4 $i )"
 	# standalone page
 	page="$head$main<br><p class='tags'>Tags: $tags</p>$foot"
 	posts_toc+="<li><small>$name</small> <a href='#$name'>$prettyname</a></li>"
-	posts_full+="<br><a id=\"$name\"></a><div class='post'><small>$name</small><br>$( tail -n +2 $i | sed 's/<h2>/<h2><a href='$name.html'>/' | sed 's/<\/h2>/<\/a><\/h2>/' )<br><p class='tags'>Tags: $tags</p></div>"
+	posts_full+="<br><a id=\"$name\"></a><div class='post'><small>$name (<a href='$author_format.html'>$author</a>)</small><br>$( tail -n +3 $i | sed 's/<h2>/<h2><a href='$name.html'>/' | sed 's/<\/h2>/<\/a><\/h2>/' )<br><p class='tags'>Tags: $tags</p></div>"
 	echo "$page" > site/$name.html
 done
 
