@@ -58,6 +58,6 @@ all_tags=""
 for i in $( ls etc/tags/*.txt ); do
 	name=$( echo "$i" | sed 's/etc\/tags\///' | sed 's/\.txt//' )
 	all_tags+="<li><a href='$name.html'>$name</a></li>"
-	echo "$head<h1>pages tagged with: $name</h1><ul>$( cat $i )</ul><br><p><a href='tags.html'>see all tags</a></p>$foot" > site/$name.html
+	echo "$head<h1>pages tagged with '<font style='color:var(--color4);'>$name</font>'</h1><ul>$( cat $i )</ul><br><p><a href='tags.html'>see all tags</a></p>$foot" > site/$name.html
 done
 echo "$head<h1>TAGS</h1><ul>$all_tags</ul>$foot" > site/tags.html
