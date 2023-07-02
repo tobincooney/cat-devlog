@@ -42,9 +42,9 @@ for i in $( ls -r src/posts/*.htm ); do
 	#main="<h1>$prettyname</h1>$( tail -n +3 $i )"
 	main="<p><a href='posts.html#$name'>&lt; Back</a></p><center><small>$name</small></center><h1>$prettyname</h1>$( tail -n +3 $i )"
 	# standalone page
-	page="$head$main<br><p>Tags: $tags</p>$foot"
+	page="$head$main<br><p class='tags'>Tags: $tags</p>$foot"
 	posts_toc+="<li><small>$name</small> <a href='#$name'>$prettyname</a></li>"
-	posts_full+="<br><hr /><br><a id=\"$name\"></a><small>$name</small><br>$( tail -n +2 $i | sed 's/<h2>/<h2><a href='$name.html'>/' | sed 's/<\/h2>/<\/a><\/h2>/' )<br><p>Tags: $tags</p>"
+	posts_full+="<br><a id=\"$name\"></a><div class='post'><small>$name</small><br>$( tail -n +2 $i | sed 's/<h2>/<h2><a href='$name.html'>/' | sed 's/<\/h2>/<\/a><\/h2>/' )<br><p class='tags'>Tags: $tags</p></div>"
 	echo "$page" > site/$name.html
 done
 
