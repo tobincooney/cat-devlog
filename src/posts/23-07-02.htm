@@ -17,5 +17,32 @@ Tobin Cooney
 <p>Today:</p>
 <ul>
 	<li>more brainstorming for the game story stuff</li>
-	<li>looked back at some flipping physics videos and sketched out plaintext of how engine could work (just the 'get postitions' function)</li>
+	<li>looked back at some flipping physics videos and sketched out plaintext of how engine could work (just the 'get postitions' function)<ul><li><details><summary>(here's a snippet)</summary><pre>
+OBJECT_DATA = [
+	"turtle1"  (3, 7)  4kg  -4.2m/s  -7.9m/s  --  -F_g
+	"turtle2"  (4, 6)  4kg  -4.1m/s  -8.0m/s  --  -F_g
+]
+
+
+physics_step(change in time seconds) {
+
+	for i in objects:
+		get object position x &amp; y
+		get object mass
+		get object velocity (v_i) in x direction, y direction
+		get forces acting on object in x direction, y direction
+
+		sum forces in x direction, y direction
+			get acceleration in x direction, y direction ( or whatever you need to do to get the next components )
+			get velocity final in x direction, y direction    ; store this in OBJECT_DATA
+			get position final in x direction, y direction    ; return this
+
+		check for collisions
+			if yes: perform the physics, store as forces or something
+
+		somehow figure out what Forces are still acting on the object; store in OBJECT_DATA
+
+}
+
+</pre></details></li></ul></li>
 </ul>
