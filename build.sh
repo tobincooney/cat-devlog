@@ -25,6 +25,15 @@ rm etc/tags/*.txt
 
 
 
+rss="<?xml version='1.0' encoding='UTF-8' ?>
+<rss version='2.0'>
+<channel>
+<title>cat game devlog</title>
+<link>https://cat.tib.ooo/</link>
+<description>devlog for cat frend game ooo</description>"
+
+
+
 # posts
 
 posts_full=""
@@ -54,12 +63,25 @@ for i in $( ls -r src/posts/*.htm ); do
 	page="$head$main<br><p class='tags'>Tags: $tags</p>$foot"
 	posts_toc+="<li><small>$name</small> <a href='#$name'>$prettyname</a></li>"
 	posts_full+="<br><a id=\"$name\"></a><div class='post'><small>$name$mod_string<br>by <a href='$author_format.html'>$author</a></small><br>$( tail -n +3 $i | sed 's/<h2>/<h2><a href='$name.html'>/' | sed 's/<\/h2>/<\/a><\/h2>/' )<br><p class='tags'>Tags: $tags</p></div>"
+	rss+="
+<item>
+  <title>$prettyname</title>
+  <link>https://cat.tib.ooo/site/$name.html</link>
+  <pubDate>$name</pubDate>
+  <description>
+<![CDATA[$( tail -n +4 $i )]]>
+  </description>
+</item>"
 	echo "$page" > site/$name.html
 done
 
 # main posts page
 posts_top=$( cat src/posts-top.htm )
 echo "$head$posts_top<br><h4>posts:</h4><ul>$posts_toc</ul>$posts_full$foot" > site/posts.html
+
+# rss foot & write
+rss+="</channel></rss>"
+echo "$rss" > site/rss.xml
 
 
 # tags
