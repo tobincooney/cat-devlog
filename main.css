@@ -15,6 +15,7 @@ p.author { width:100%; text-align:center; margin:0; padding:0;}
 p.tags { font-size:94%; width:fit-content; padding-top:12px; border-top:2px solid var(--color1); margin-top:8px; }
 i.edited { color:var(--color2); }
 pre { background-color:white; color:black; width:inherit; overflow:scroll; padding:1em; }
+img { width:600px; max-width:100%; }
 
 /* mobile */
 @media screen and (max-width: 600px) {
