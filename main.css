@@ -1,5 +1,5 @@
 @font-face { font-family:'Josefin'; src:url('media/JosefinSans-VariableFont_wght.ttf'); }
-:root { --color0:#eee; --color1:#211; --color2:#0a8; --color3:#f55; --color4:#fa0; }
+:root { --color0:#fed; --color1:#211; --color2:#0a8; --color3:#f55; --color4:#fa0; }
 body { font-family:'Josefin', serif; line-height:1.2em; background-color:var(--color0); color:var(--color1); margin:0; }
 a { color:inherit; text-decoration:underline; }
 a:hover { color:var(--color3); }
