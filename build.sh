@@ -47,7 +47,8 @@ for i in $( ls -r src/posts/*.htm ); do
 	fi
 	prettyname=$( head -3 $i | tail -1 | sed 's/<h2>//' | sed 's/<\/h2>//' )
 	author=$( head -2 $i | tail -1 )
-	author_format=$( echo "author.${author,,}" | sed 's/ /_/' )
+	#author_format=$( echo "author.${author,,}" | sed 's/ /_/' )
+	author_format=$( echo "author.$author" | sed 's/ /_/' )
 	echo "<li><a href=\"$name.html\">$prettyname</a></li>" >> etc/tags/$author_format.txt
 	tags_raw=$( head -1 $i )
 	tags=""
