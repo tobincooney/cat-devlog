@@ -1,0 +1,38 @@
+engine
+Tobin Cooney
+<h2>trying to do physics and save file JSON concept</h2>
+
+<ul>
+	<li>switch from UAM to conservation of M.E.? (I cannae remembeour but i'm pretty sure uam is derived from it anyway so it would make it more universal-ey)</li>
+	<li>Related: break up calculations into what kind/what method:<ul>
+		<li>Conservation of Mechanical Energy (free fall/projectile motion, spring compressioney things, etc. etc.)</li>
+		<li>Collision physics-- idk how we're gonna do this yet. Elastic v. inelastic collisions? i forget all the things<ul><li><a href="https://www.flippingphysics.com/" rel="external">flipping physics</a>! end of note.</li></ul></li></ul></li>
+	<li>I think starting out with save files as JSON is gonna work pretty good. I'm sure there's a Rust library to import it to vectors or something easily (still haven't learned rust vector stuff yet though), and it feels like the most straigtforward way to do it.<ul><li><details><summary>a scribble:</summary>
+		<pre>{
+	"objects": [
+		{
+			"label": "susan",
+			"skin": "assets/susan.map",
+			"posx": 46.983427,
+			"posy": -26.847261,
+			"velx": -4.243185,
+			"vely": 0.0,
+			"mass": 26.0,
+			"forces": [ "F_g", "F_N", "F_T1" ]
+		},
+		{
+			"label": "timothy",
+			"mass": 46.2,
+			"forces": [ "F_g" ]
+		}
+	],
+	"forces": [
+		{ "label": "F_g", "equation": "m * a_g" },
+		{ "label": "F_N", "equation": "-F_g" }
+	],
+	"variables": [
+		{ "label": "a_g", "def": "-g" }
+	]
+}</pre>
+	</details></li></ul>But my brain is struggling to figure out how stuff like a tension force gets calculated, what part of the program does that... idk we'll get there</li>
+</ul>
