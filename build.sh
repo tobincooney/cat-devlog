@@ -76,7 +76,7 @@ done
 
 # main posts page
 posts_top=$( cat src/posts-top.htm )
-echo "$head$posts_top<br><h4>posts:</h4><ul>$posts_toc</ul>$posts_full$foot" > site/posts.html
+echo "$head$posts_top<br><details><summary><b>table of contents</b></summary><ul>$posts_toc</ul></details><br>$posts_full$foot" > site/posts.html
 
 # rss foot & write
 rss+="</channel></rss>"
