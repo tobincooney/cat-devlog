@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<link rel="stylesheet" type="text/css" href="/main.css" />
+	<title>403</title>
+</head>
+<body>
+	<div id="main">
+		<h1>&#127838; 403</h1>
+		<p>The file in question, <b style="text-decoration:underline 2px var(--color2);"><code><!--#echo var="REQUEST_URI" --></code></b>, is, regrettably, out of bounds at this time. We apologize for any inconveniences this may cause.</p>
+		<ul>
+			<li><a href="/">return to devlog</a></li>
+		</ul>
+	</div>
+</body>
+</html>
