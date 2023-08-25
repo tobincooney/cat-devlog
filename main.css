@@ -16,8 +16,8 @@ p.tags { font-size:94%; width:fit-content; padding-top:12px; border-top:2px soli
 i.edited { color:var(--color2); }
 pre { background-color:white; color:black; width:inherit; overflow:scroll; padding:1em; }
 img { width:600px; max-width:100%; }
-details { border-left:2px solid var(--color1); padding:6px; }
-details[open] { border:1px solid var(--color4); border-left:3px solid var(--color4); max-width:98%; width:fit-content; padding-right:8px; background-color:var(--shade1); }
+details { border-left:2px solid var(--color1); padding:6px; margin-top:6px; }
+details[open] { border:1px solid var(--color4); border-left:3px solid var(--color4); margin-top:0; max-width:96%; width:fit-content; padding:12px; background-color:var(--shade1); }
 
 /* mobile */
 @media screen and (max-width: 600px) {
