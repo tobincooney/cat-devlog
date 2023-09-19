@@ -27,7 +27,7 @@ rss="<?xml version='1.0' encoding='UTF-8' ?>
 <rss version='2.0'>
 <channel>
 <title>cat game devlog</title>
-<link>https://cat.tib.ooo/</link>
+<link>https://cat.tivub.xyz/</link>
 <description>devlog for cat frend game ooo</description>"
 
 
@@ -65,7 +65,7 @@ for i in $( ls -r src/posts/*.htm ); do
 	rss+="
 <item>
   <title>$prettyname</title>
-  <link>https://cat.tib.ooo/site/$name.html</link>
+  <link>https://cat.tivub.xyz/site/$name.html</link>
   <pubDate>$name</pubDate>
   <description>
 <![CDATA[$( tail -n +4 $i )]]>
