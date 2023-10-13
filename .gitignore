@@ -2,3 +2,5 @@ site/
 etc/tags/
 media/
 etc/logs.txt
+.well-known/
+etc/cat_game/
