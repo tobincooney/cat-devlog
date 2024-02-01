@@ -1,6 +1,6 @@
 @font-face { font-family:'Josefin'; src:url('media/JosefinSans-VariableFont_wght.ttf'); }
-:root { --color0:#fed; --color1:#211; --color2:#0a8; --color3:#f55; --color4:#fa0; --shade1:rgba(221, 238, 255, 0.2); --shade2:rgba(17, 34, 34, 0.2); }
-body { font-family:'Josefin', serif; line-height:1.2em; background-color:var(--color0); color:var(--color1); margin:0; }
+:root { --color0:#fed; --color1:#211; --color2:#0a8; --color3:#f55; --color4:#fa0; --shade1:rgba(221, 208, 205, 0.2); --shade2:rgba(17, 34, 34, 0.2); }
+body { font-family:'Josefin', serif; line-height:1.2em; background-color:var(--color0); background-image:url(media/noise.png); color:var(--color1); margin:0; }
 a { color:inherit; text-decoration:underline; }
 a[target="_blank"] { text-decoration-style:dotted; }
 a:hover { color:var(--color3); }
